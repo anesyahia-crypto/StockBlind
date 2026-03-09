@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation</title>
+    <link rel="stylesheet" href="style-simul.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="logo-dots">
+                        <span class="dot blue"></span>
+                        <span class="dot light"></span>
+                    </div>
+                    <div class="brand-text">
+                        <h1>StockBlind</h1>
+                        <p>Inventory Intelligence</p>
+                    </div>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active"><i class="ph ph-squares-four"></i> Dashboard</a>
+                    <a href="#" class="nav-link"><i class="ph ph-package"></i> Inventory</a>
+                    <a href="#" class="nav-link"><i class="ph ph-chart-line-up"></i> Insights</a>
+                    <a href="#" class="nav-link"><i class="ph ph-chat-centered-text"></i> AI Assistant</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link"><i class="ph ph-gear"></i> Settings</a>
+                <a href="#" class="nav-link"><i class="ph ph-sign-out"></i> Logout</a>
+                
+                <div class="help-box">
+                    <div class="help-content">
+                        <strong>Need Help?</strong>
+                        <a href="">Contact Support</a>
+                    </div>
+                    <div class="help-icon-bg"><i class="ph ph-question"></i></div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="page-title">
+                    <h2>Dashboard</h2>
+                    <p>Welcome back, <strong>Shop Owner</strong> 👋</p>
+                </div>
+                <div class="top-actions">
+                    <div class="search-input">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <button class="store-selector">My Store <i class="ph ph-caret-down"></i></button>
+                    <button class="notif-bell"><i class="ph ph-bell"></i><span class="dot-red"></span></button>
+                    <button class="user-profile">O</button>
+                </div>
+            </header>
+
+            <section class="card-grid">
+                <div class="card-stat">
+                    <div class="card-header">
+                        <h3>Stock Health Score</h3>
+                        <span class="status-pill green">Good</span>
+                    </div>
+                    <div class="health-container">
+                        <div class="donut-wrapper">
+                            <svg viewBox="0 0 36 36" class="donut">
+                                <path class="donut-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="donut-segment" stroke-dasharray="78, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            </svg>
+                            <div class="donut-text">78%</div>
+                        </div>
+                        <ul class="health-stats">
+                            <li><span class="marker red"></span> Low Stock <strong>4/150</strong></li>
+                            <li><span class="marker yellow"></span> Slow Moving <strong>3</strong></li>
+                            <li><span class="marker blue"></span> Total Products <strong>150</strong></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="trend-pos"><i class="ph ph-trend-up"></i> +12% from last week</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="header-with-icon">
+                            <div class="icon-bg-red"><i class="ph ph-warning"></i></div>
+                            <h3>Low Stock Alerts</h3>
+                        </div>
+                        <a href="#" class="view-link">View All</a>
+                    </div>
+                    <div class="alert-list">
+                        <div class="alert-item">
+                            <div class="item-thumb"><img src="milk-restock.png" alt="milk-restock"></div>
+                            <div class="item-info"><strong>Milk</strong><p>5 units left</p></div>
+                            <button class="restock-btn">Restock</button>
+                        </div>
+                        <div class="alert-item">
+                            <div class="item-thumb"><img src="bread-restcok.png" alt="bread-restcok"></div>
+                            <div class="item-info"><strong>Bread</strong><p>3 units left</p></div>
+                            <button class="restock-btn">Restock</button>
+                        </div>
+                        <div class="alert-item">
+                            <div class="item-thumb"><img src="egg-restock.png" alt="egg-restock"></div>
+                            <div class="item-info"><strong>Eggs</strong><p>7 units left</p></div>
+                            <button class="restock-btn">Restock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ai-card">
+                    <div class="card-header">
+                        <div class="header-with-icon">
+                            <div class="icon-bg-blue"><i class="ph ph-chat-centered-text"></i></div>
+                            <h3>AI Assistant</h3>
+                        </div>
+                        <i class="ph ph-dots-three-vertical"></i>
+                    </div>
+                    <div class="chat-area">
+                        <div class="bubble user">What should I restock this week?</div>
+                        <div class="bubble bot">
+                            Based on <a href="#">sales trends</a>, I recommend restocking:
+                            <ul>
+                                <li>Milk (5 left)</li>
+                                <li>Bread (3 left)</li>
+                                <li>Sugar (2 left)</li>
+                            </ul>
+                        </div>
+                        <div class="bot-actions">
+                            <p>Generate purchase order?</p>
+                            <div class="btn-row">
+                                <button class="btn-yes">Yes</button>
+                                <button class="btn-later">Later</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" placeholder="Ask me anything...">
+                        <button class="send-icon"><i class="ph ph-paper-plane-right"></i></button>
+                    </div>
+                </div>
+            </section>
+            <section class="suggestions-container">
+                    <h3>💡 Weekly Suggestions :</h3>
+                <div class="suggestions">
+                    <div class="suggestion-card">
+                        <h4 class="text-green"><i class="ph ph-package"></i> Restock</h4>
+                        <ul>
+                            <li>Milk</li>
+                            <li>Bread</li>
+                            <li>Sugar</li>
+                        </ul>
+                    </div>
+                    <div class="suggestion-card border-left">
+                        <h4 class="text-red"><i class="ph ph-trend-down"></i> Reduce Stock</h4>
+                        <ul>
+                            <li>Biscuits</li>
+                            <li>Juice X</li>
+                            <li>Oil</li>
+                        </ul>
+                    </div>
+                    <div class="suggestion-card border-left">
+                        <h4 class="text-orange"><i class="ph ph-fire"></i> Best Seller</h4>
+                        <div class="best-seller-item">
+                            <img src="y3333 coca.png" alt="Cola" width="40">
+                            <div>
+                                <strong>Coca Cola</strong><br>
+                                <small>35 sales <span class="text-green">↑ +8%</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid-bottom">
+                <div class="card sales-placeholder">
+                    <div class="card-header">
+                        <h3>Sales Overview</h3>
+                        <a href="#">View Report</a>
+                    </div>
+                    <div class="graph-area">
+                        <img src="graphe.png" alt="graph-area">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Top Products</h3>
+                        <a href="#">View All</a>
+                    </div>
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Sales</th>
+                                <th>Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="y3333 coca.png" alt=""><strong> Coca Cola</strong></td>
+                                <td>35 units</td>
+                                <td class="text-green">$50</td>
+                            </tr>
+                            <tr>
+                                <td><img src="milk.png" alt=""><strong> Milk</strong></td>
+                                <td>28 units</td>
+                                <td class="text-green">$30</td>
+                            </tr>
+                            <tr>
+                                <td><img src="bread.png" alt=""><strong> Bread</strong></td>
+                                <td>22 units</td>
+                                <td class="text-green">$18</td>
+                            </tr>
+                            <tr>
+                                <td><img src="sugar.png" alt=""><strong> Sugar</strong></td>
+                                <td>18 units</td>
+                                <td class="text-green">$12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>
+</html>

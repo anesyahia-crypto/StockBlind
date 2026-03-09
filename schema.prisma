@@ -1,0 +1,36 @@
+// schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  sku          String   @unique
+  category     String?
+  basePrice    Float
+  currentStock Int      @default(0)
+  minThreshold Int      @default(10) // For Low-Stock Alerts
+  expiryDate   DateTime?
+  locationId   String
+  location     Location @relation(fields: [locationId], references: [id])
+  sales        Sale[]
+  createdAt    DateTime @default(now())
+}
+
+model Location {
+  id       String    @id @default(cuid())
+  name     String    // e.g., "Algiers Warehouse" or "Oran Store"
+  address  String?
+  products Product[]
+}
+
+model Sale {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int
+  totalPrice Float
+  saleDate  DateTime @default(now())
+}
